@@ -3,7 +3,7 @@ import { string, number, array } from "prop-types";
 import { animated, interpolate } from "react-spring/hooks";
 import Carousel from "nuka-carousel";
 
-const Card = ({ i, x, y, rot, scale, trans, bind, data }) => {
+const Card = ({ i, x, y, rot, scale, bind, data }) => {
   const { name, age, distance, text, pics } = data[i];
 
   return (
@@ -15,9 +15,6 @@ const Card = ({ i, x, y, rot, scale, trans, bind, data }) => {
     >
       <animated.div
         {...bind(i)}
-        style={{
-          transform: interpolate([rot, scale], trans)
-        }}
       >
         <div className="card">
           <Carousel>

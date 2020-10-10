@@ -16,10 +16,6 @@ const to = i => ({
 });
 const from = i => ({ rot: 0, scale: 1.5, y: -1000 });
 
-const trans = (r, s) =>
-  `perspective(1500px) rotateX(30deg) rotateY(${r /
-  10}deg) rotateZ(${r}deg) scale(${s})`;
-
 function Deck() {
   const [gone] = useState(() => new Set());
 
@@ -74,7 +70,6 @@ function Deck() {
       y={y}
       rot={rot}
       scale={scale}
-      trans={trans}
       data={data}
       bind={bind}
     />
